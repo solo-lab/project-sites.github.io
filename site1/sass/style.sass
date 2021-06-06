@@ -1,0 +1,355 @@
+$color_red: #00897b
+
+*
+	margin: 0
+	padding: 0
+	font: 1em/1.4em sans-serif
+
+ul
+	list-style: none
+
+a
+	text-decoration: none
+
+.container
+	padding: 0
+	margin: 0 auto
+	width: 1400px
+	position: relative
+
+.clearfix
+	content: " "
+	display: table
+	width: 100%
+	clear: both
+
+.button
+	text-decoration: none
+	font-size: 20px
+	color: #000000
+	border: 2px solid #00897b
+	padding: 18px 32px
+	transition: all .2s ease
+	&:hover
+		color: #ffffff
+		background: #00897b
+	&:active
+		background: #00897b9f
+
+
+
+// _____________________________
+
+.header
+	background: #ffffff
+	margin-top: 50px
+	.flex__logo
+		display: flex
+		justify-content: space-between
+		margin-bottom: 50px
+		.logo
+			font-size: 25px
+			color: #000000
+	.menu
+		&__list // ul
+			display: flex
+			font-size: 20px
+		&__link // a
+			padding-left: 20px
+			padding-right: 20px
+			color: #000000
+		&__search
+			color: #000
+			&:before
+				content: "\f002"
+				font-family: FontAwesome
+				font-size: 17px
+	.header__text
+		background-image: url("../img/fon.jpg")
+		background-repeat: no-repeat
+		background-size: cover
+		background-position-y: 70%
+		height: 800px
+		position: relative
+		.center__text
+			color: #fff
+			text-align: center
+			.h1
+				font-size: 60px
+				padding-top: 185px
+			.h2
+				font-size: 22px
+			.button__center
+				margin-top: 115px
+				.button
+					color: #fff
+					padding: 25px 32px
+					border: 4px solid #fff
+					&:hover
+						background: #00897b
+						border-color: #00897b
+		.icon
+			padding-bottom: 70px
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%, 0%)
+			.fa
+				color: #fff
+				font-size: 30px
+.section_1
+	.title
+		padding-top: 130px
+		text-align: center
+		color: #000000
+		font-size: 30px
+		.h2
+			font-weight: bold
+		.text
+			padding-top: 35px
+			font-size: 15px
+			color: #000000
+			width: 625px
+			margin: 0 auto
+	.inner
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		margin-top: 125px
+		margin-bottom: 130px
+		&__item
+			text-align: center
+			.h3
+				margin-top: 40px
+				font-size: 20px
+				font-weight: bold
+			.text
+				margin-top: 25px
+				font-size: 15px
+				width: 270px
+
+.section_2
+	background-color: #e4fdf9
+	.title
+		padding-top: 130px
+		text-align: center
+		color: #000000
+		font-size: 30px
+		.h2
+			font-weight: bold
+		.text
+			padding-top: 35px
+			font-size: 15px
+			color: #000000
+			width: 625px
+			margin: 0 auto
+	.inner
+		display: flex
+		justify-content: space-evenly
+		flex-wrap: wrap
+		margin-top: 125px
+		margin-bottom: 130px
+		&__item
+			width: 370px
+			text-align: center
+			color: #000
+			background-color: #ffffff
+			margin-top: 33px
+			transition: all .2s ease
+			&:hover
+				background-color: #00897b
+				color: #ffffff
+				.button
+					color: #ffffff
+					border-color: #ffffff
+				.inner__content
+					.img__white
+						margin: 0 auto
+						display: block
+					.img__black
+						display: none
+					.h3
+						margin-top: 46px
+			.button
+				padding: 18px 14px
+				&:hover
+					background: #05c2af
+				&:active
+					background: #05c2af59
+		&__content
+			padding: 50px 45px
+			.img__white
+				display: none
+			.h3
+				margin-top: 40px
+				font-size: 20px
+				font-weight: bold
+			.text
+				margin-top: 25px
+				font-size: 15px
+				margin-bottom: 50px
+
+
+
+.section_3
+	.title
+		padding-top: 130px
+		text-align: center
+		color: #000000
+		.h2
+			font-weight: bold
+			font-size: 30px
+		.text
+			padding-top: 35px
+			font-size: 15px
+			color: #000000
+			width: 625px
+			margin: 0 auto
+		.buttons
+			padding-top: 135px
+			padding-bottom: 120px
+			.button
+				font-size: 20px
+				color: #000000
+				border: 2px solid #00897b
+				padding: 18px 32px
+				transition: all .2s ease
+				&:hover
+					color: #ffffff
+					background: #00897b
+	.inner__content
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		justify-content: space-evenly
+		.img
+			padding-bottom: 30px
+			width: 370px
+			position: relative
+			overflow: hidden
+			&:hover
+				.text
+					opacity: 1
+					left: 0
+			.text
+				opacity: 0
+				position: absolute
+				left: -999px
+				top: 0px
+				background: rgba(0, 0, 0, 0.702)
+				width: 100%
+				height: 370px
+				transition: all .3s ease
+				.text1
+					height: 100%
+					display: flex
+					flex-direction: column
+					justify-content: center
+					text-align: center
+					color: #ffffff
+					.text__title
+						font-size: 20px
+					.text3
+						font-size: 15px
+	.button__bottom
+		text-align: center
+		margin-top: 130px
+		margin-bottom: 130px
+
+.footer
+	.footer__form
+		background-image: url("../img/fon footer.jpg")
+		background-repeat: no-repeat
+		background-size: cover
+		height: 1250px
+		.title__text
+			padding-top: 130px
+			color: #ffffff
+			text-align: center
+			.h2
+				font-size: 30px
+				font-weight: bold
+			.text
+				font-size: 15px
+				width: 625px
+				padding-top: 35px
+				margin: 0 auto
+		.form__icon
+			margin-top: 100px
+			margin-bottom: 80px
+			.icon
+				display: flex
+				justify-content: space-evenly
+				.text__img
+					width: 260px
+					text-align: center
+					.img
+						margin: 0 auto
+						width: 100px
+						height: 100px
+						border-radius: 50%
+						background: #3949ab
+						display: flex
+						align-items: center
+						justify-content: center
+					.text
+						color: #ffffff
+		form
+			width: 1035px
+			margin: 0 auto
+			.inner__input
+				display: flex
+				justify-content: space-between
+				margin-bottom: 35px
+				input[type=text]
+					width: 48%
+					border-radius: 10px
+					font-weight: bold
+					padding-top: 35px
+					padding-bottom: 35px
+					font-size: 20px
+			textarea
+				width: 100%
+				height: 325px
+				border-radius: 10px
+				font-weight: bold
+				padding-top: 30px
+				padding-bottom: 30px
+				font-size: 20px
+			.button
+				float: right
+				margin-top: 40px
+				border-radius: 10px
+				padding-left: 80px
+				padding-right: 80px
+				font-weight: bold
+				border-color: #272727
+	.footer__botem
+		text-align: center
+		.h2
+			font-size: 20px
+			margin-top: 20px
+			margin-bottom: 20px
+			font-weight: bold
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
