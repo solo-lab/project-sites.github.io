@@ -1,0 +1,306 @@
+// В начале любых проектов
+*
+	margin: 0 
+	padding: 0
+	font: 1em/1.4em sans-serif
+
+ul
+	list-style: none
+
+a
+	text-decoration: none
+
+.container
+	padding: 0
+	margin: 0 auto
+	width: 1024px
+	position: relative
+
+.clearfix
+	content: " "
+	display: table
+	width: 100%
+	clear: both
+//---------------------------
+
+
+
+//____header____
+.header
+	background: #3bc3b7
+	.bg_flex__logo
+		background: #000
+	.flex__logo
+		display: flex
+		justify-content: space-between
+		// Logo
+		.logo
+			font-size: 49px
+			font-family: 'Lobster', cursive
+			color: #3fbfb3
+			text-decoration: none
+			transition: all .2s ease
+			&:hover
+				color: rgb(41, 255, 234)
+		// Form
+		form 
+			margin-top: 15px
+			width: 435px
+			height: 37px
+			position: relative
+			input, button 
+				outline: none
+				background: transparent
+			input 
+				width: 100%
+				height: 30px
+				padding-left: 10px
+				border: 3px solid #e1e1e1
+				position: relative
+				color: #fff
+				&:focus 
+					border-color: #e1e1e1
+			button 
+				border: none
+				height: 24px
+				width: 24px
+				font-size: 24px
+				position: absolute
+				top: 3%
+				right: 0
+				cursor: pointer
+				color: #e1e1e1
+				transition: all .2s ease
+				&:hover
+					color: #ffffff
+				&:before 
+					content: "\f002"
+					font-family: FontAwesome
+		// корзина
+		.basket
+			margin-top: 16px
+			fill: rgb(60, 195, 181)
+			&:hover
+				fill: rgb(41, 255, 234)
+	// MENU
+	.menu
+		width: 100%
+		background:#4ccfc1
+		&__list // ul
+			display: flex
+			font-size: 21px
+			justify-content: center
+		&__link // a
+			border-right: 3px solid #ffffff
+			padding-left: 20px
+			padding-right: 20px
+			color: #fff
+			font-family: 'Bebas Neue', cursive
+			transition: all .2s ease
+			&:hover
+				color: rgb(0, 0, 0)
+		&__item // li
+			&:first-child // первый елемент
+				.menu__link
+					padding-left: 0px
+			&:last-child // последний елемент
+				.menu__link
+					border-right: none
+					padding-right: 0px
+		&__icon // Гамбургер иконка
+			display: none
+			width: 45px
+			height: 35px
+			position: relative
+			cursor: pointer
+			margin-top: 7px
+			span
+				display: block
+				position: absolute
+				height: 9px
+				width: 100%
+				background: #fff
+				border-radius: 9px
+				opacity: 1
+				left: 0
+				transform: rotate(180deg)
+				transition: .25s ease-in-out
+				// 👇 1 елемент span
+				&:nth-child(1)
+					top: 0px
+				// 👇 2-3 елемент span
+				&:nth-child(2), &:nth-child(3)
+					top: 13px
+					background: rgba(255, 255, 255, 0.8)
+				// 👇 4 елемент span
+				&:nth-child(4)
+					top: 26px
+	// Text
+	.text_block
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		padding:
+			top: 70px
+			bottom: 70px
+		// img 
+		.img_1
+			width: 278px
+		.text_center
+			font-family: 'Bebas Neue', cursive
+			color: #fff
+			font-size: 61px
+			width: 410px
+		.text
+			font-size: 17px
+		a.button 
+			text-transform: uppercase //большой текст
+			color: #fff
+			font-size: 27px
+			border: 4px solid #fff
+			padding: 7px
+			border-radius: 10px
+			transition: all .2s ease
+			&:hover
+				border: 4px solid #000000
+				color: #080808
+//---------------------------
+
+
+//____section_1____
+.section_1
+	background: #fff
+	.block__flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.block__item
+			width: 340px
+			display: flex
+			padding: 
+				top: 30px
+				bottom: 30px
+			// 👇 1 елемент .block__item
+			&:nth-child(1)
+				// img
+				img
+					width: 180px
+				border-right: 1px solid #e7e7e7
+				.text_button
+					margin: 
+						left: 16px
+			// 👇 2 елемент .block__item
+			&:nth-child(2)
+				width: 335px
+				padding: 
+					left: 5px
+				border-right: 1px solid #e7e7e7
+				.text_button
+					margin: 
+						left: 60px
+			// 👇 3 елемент .block__item
+			&:nth-child(3)
+				width: 294px
+				padding: 
+					left: 46px
+				.text_button
+					margin: 
+						left: 78px
+			//______________
+			.text_button
+				.text
+					font-size: 27px
+					margin-bottom: 10px
+				a
+					color: #fff
+				.button
+					background: #3cc395
+					padding: 7px 7.5px
+					border-radius: 4px
+					transition: all .2s ease
+					&:hover
+						background: #000000
+//---------------------------
+
+
+
+//____section_2____
+.section_2
+	.bg__h2
+		background: #3bc3b7
+		.h2
+			height: 68px
+			display: table-cell
+			vertical-align: middle
+			color: #fff
+			font-weight: bold
+			padding:
+				left: 57px
+	.products
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+		margin-top: 50px
+	.product
+		border: 1px solid #e4e4e4
+		border-bottom: 5px solid #3cc395
+		width: 257px
+		text-align: center
+		margin-bottom: 47px 
+		&__photo
+		padding-bottom: 31px
+		padding-top: 20px
+		&__name
+		.text
+			margin-top: 20px
+			color: #afafaf
+		&__buy
+			margin-top: 10px
+			.button
+				background: #3cc395
+				padding: 7px 7.5px
+				border-radius: 4px
+				color: #fff
+				transition: all .2s ease
+				&:hover
+					background: #000000
+//---------------------------
+
+
+
+//____footer____
+.footer
+	background: #3bc3b7
+	.block
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evenly
+		padding-bottom: 40px
+		&__item
+			color: #fff
+			.h4
+				font-size: 27px
+				margin-bottom: 30px
+				margin-top: 30px
+		&__link
+			color: #fff
+			display: block
+			font-size: 15px
+			line-height: 1.8
+			transition: all .2s ease
+			&:hover
+				color: #000000
+	&__copyright
+		background: #2da89b
+		color: #fff
+		.h5
+			text-align: center
+			padding: 
+				top: 15px
+				bottom: 15px
+//---------------------------
+
+
+
+// Под мобильники --- Всегда в конце файла стилей
+@import "media"
