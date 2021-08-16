@@ -1,0 +1,429 @@
+*, *:before, *:after
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	font-family: sans-serif
+	scroll-behavior: smooth // плавный скрол
+	min-width: 320px
+
+ul
+	list-style: none
+
+a
+	text-decoration: none
+
+.container
+	padding: 0
+	margin: 0 auto
+	width: 1200px
+	position: relative
+
+// исправлять баги
+.clearfix
+	content: " "
+	display: table
+	width: 100%
+	clear: both
+
+// кружочки
+.circle
+	width: 7px
+	height: 7px
+	background: #fff
+	border-radius: 50px
+	display: inline-block
+
+// цвет при выделения текста
+::selection
+	background-color: #989898
+	color: #fff
+
+
+// header
+header.header
+	height: 100vh
+	background-image: url("../img/1.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position-y: 70%
+	overflow: hidden
+	.header__background
+		height: 100vh
+		background: rgba(0, 0, 0, 0.600)
+	.container
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		z-index: 1
+	// header top + menu
+	nav.menu
+		width: 100%
+		div.menu__top
+			z-index: 1
+			display: flex
+			width: 100%
+			justify-content: space-between
+			padding-top: 30px
+			// Иконка гамбургер
+			div.menu__icon
+				z-index: 201
+				width: 45px
+				height: 35px
+				position: relative
+				cursor: pointer
+				margin-top: 7px
+				span
+					display: block
+					position: absolute
+					height: 4px
+					width: 75%
+					background: #E1E8EB
+					border-radius: 9px
+					opacity: 1
+					left: 0
+					transform: rotate(180deg)
+					transition: .25s ease-in-out
+					// 👇 1 елемент span
+					&:nth-child(1)
+						top: 3px
+					// 👇 2-3 елемент span
+					&:nth-child(2), &:nth-child(3)
+						top: 13px
+						background: rgb(225, 232, 235)
+					// 👇 4 елемент span
+					&:nth-child(4)
+						top: 23px
+			// язик + logo
+			ul.right__list
+				z-index: 201
+				font-size: 22px
+				li.right__item
+					padding-top: 10px
+					position: relative
+					top: -10px
+					right: 10px
+					display: inline-block
+					font-size: 18px
+					&:hover
+						div.right__language
+							color: #5D5D5D
+						span.triangle
+							top: -3px
+							border-top: 7px solid #5D5D5D
+							transform: scale(1, -1)
+						ul.right__drop
+							top: 28px
+							opacity: 1
+							a
+								&:hover
+									color: #fff
+					div.right__language
+						color: #E1E8EB
+						user-select: none
+						transition: all .2s ease
+					ul.right__drop
+						position: absolute
+						top: -999px
+						left: 22px
+						opacity: 0
+						transition: opacity .2s ease
+						li
+							width: 200%
+							height: 30px
+						a
+							color: #a8a8a8
+							padding-right: 50%
+							padding-bottom: 10px
+				span.triangle
+					border: 7px solid transparent
+					border-top: 7px solid #E1E8EB
+					display: inline-block
+					position: relative
+					top: 6px
+					left: -1px
+					transition: all .2s ease
+				a.logo
+					div.logo__text
+						display: inline-block
+						color: #E1E8EB
+						font-family: 'Russo One', sans-serif
+						text-align: center
+					div.small__text
+						font-size: 13px
+			// Menu main
+			.menu__center.display__block
+				display: none
+			div.menu__center
+				background: #666666
+				background: linear-gradient(45deg, #1c0d05, rgba(21, 10, 4, 0.812)), url('../img/bg__trubi.jpg')
+				background-repeat: no-repeat
+				background-size: cover
+				background-position-y: 70%
+				min-width: 100vw
+				height: 100vh
+				z-index: 200
+				position: absolute
+				top: 0
+				left: 0%
+				display: flex
+				justify-content: center
+				// display: none
+				ul.menu__list
+					display: flex
+					font-size: 21px
+					justify-content: center
+					flex-direction: column
+					text-align: center
+					width: 550px
+					div.menu__title
+						color: #E1E8EB
+						font-size: 50px
+						text-transform: uppercase
+						margin-bottom: 40px
+					li.menu__item
+						margin-bottom: 20px
+						&:first-child // первый елемент
+							a.menu__link
+								padding-left: 0px
+						&:last-child // последний елемент
+							a.menu__link
+								border-right: none
+								padding-right: 0px
+						a.menu__link
+							color: #E1E8EB
+							transition: all .2s ease
+							&:hover
+								color: rgb(107, 107, 107)
+	// center header
+	div.header__center
+		text-align: center
+		color: #E1E8EB
+		position: relative
+		top: -22%
+		h2.h2
+			font-size: 65px
+			font-family: 'Ubuntu Condensed', sans-serif
+		h3.h3
+			font-size: 25px
+	// telephone bottom
+	.telephone__bottom
+		// button next section
+		.button__next--section
+			margin: 0 auto
+			text-align: center
+			width: 52px
+			height: 52px
+			a
+				color: #fff
+				font-size: 50px
+				padding: 0 10px
+			&:hover
+				a
+					color: #000
+				background: #E1E8EB
+				border-radius: 50px
+		// contacts
+		.contacts
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding-top: 20px
+			padding-bottom: 20px
+			.contact__item
+				font-family: 'Ubuntu Condensed', sans-serif
+				color: #fff
+				font-size: 24px
+
+
+
+section.about__company
+	background: #181818
+	div.title
+		padding-top: 40px
+		padding-bottom: 40px
+		h2.h2
+			text-align: center
+			font-size: 44px
+			color: #fff
+			font-family: 'Russo One', sans-serif
+	// text
+	div.about__company--text
+		background: #5D5D5D
+		padding-top: 50px
+		padding-bottom: 40px
+		padding-left: 50px
+		padding-right: 50px
+		color: #fff
+		font-size: 22px
+		div.item__text1
+			width: 100%
+		h4.h4
+			padding-top: 30px
+			padding-bottom: 10px
+			font-size: 28px
+		ul.list__text
+			margin-left: 40px
+			li.list__item
+				width: 100%
+				.circle
+					margin-right: 10px
+	// certificates
+	.certificates
+		background: #4D4646
+		padding-top: 60px
+		padding-bottom: 60px
+		div.flex__certificates
+			display: flex
+			align-items: center
+			justify-content: space-around
+			a.products
+				padding: 30px
+				border: 4px solid #5D5D5D
+				border-radius: 6px
+				display: flex
+				align-items: center
+				transition: all .25s ease-in-out
+				&:hover
+					background: #5D5D5D
+				img
+					width: 100px
+				div.text
+					margin-left: 20px
+					position: relative
+					top: -6%
+					color: #fff
+					font-size: 20px
+
+
+
+// gallery
+section.gallery
+	background: #181818
+	padding-top: 40px
+	padding-bottom: 55px
+	overflow: hidden
+	.title
+		padding-bottom: 40px
+		.h2
+			text-align: center
+			font-size: 44px
+			letter-spacing: 3px
+			color: #fff
+			font-family: 'Russo One', sans-serif
+	ul.prev-next-navigation
+		li
+			z-index: 121
+			position: absolute
+			top: 50%
+			width: 35px
+			height: 38px
+			color: #fff
+			font-size: 40px
+			transition: all .2s ease-in-out
+			overflow: hidden
+			cursor: pointer
+			line-height: 0
+			&:hover
+				color: rgba(181, 180, 178, 0.739)
+				opacity: 0.9
+		li.img__prev
+			left: -0.5%
+		li.img__next
+			right: -1%
+	ul.gallery__slider
+		div.siema__carousel
+			z-index: 20
+			width: 1215px
+			position: relative
+			left: 3%
+		li.slider__item
+			width: 320px
+			overflow: hidden
+			display: flex
+			flex-wrap: wrap
+			img
+				width: 100%
+				height: 260px
+			.text
+				position: relative
+				top: 0%
+				width: 100%
+				height: 200px
+				padding: 20px 25px
+				background-color: #5D5D5D
+				color: #fff
+
+
+
+
+// footer
+footer.footer
+	background: #4D4646
+	// top
+	.footer__top--info
+		padding-top: 50px
+		padding-bottom: 50px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		color: #fff
+		h3.h3
+			user-select: none // запрет копирования
+			font-size: 27px
+			margin-bottom: 10px
+		div.text
+			padding-left: 20px
+			padding-right: 20px
+			font-size: 20px
+			a
+				color: #fff
+				transition: all .25s ease-in-out
+				&:hover
+					color: #8b8989
+		// schedule
+		.schedule
+			.text
+				display: flex
+				justify-content: space-between
+				user-select: none // запрет копирования
+				.day
+					margin-right: 20px
+		// contacts
+		.contacts
+			h4.h4
+				font-size: 20px
+				margin-top: 20px
+				margin-bottom: 8px
+		// address
+		.address
+			.map__wrap
+				margin-top: 20px
+				overflow: hidden
+				position: relative
+				width: 450px
+				height: 120px
+				iframe
+					position: absolute
+					top: -37px
+					left: -96px
+	// bottom
+	.footer__bottom--copyright
+		background: #1e1e1e
+		text-align: center
+		padding-top: 20px
+		padding-bottom: 20px
+		font-size: 18px
+		color: #fff
+
+
+
+
+
+
+
+
+
+@import "media"
