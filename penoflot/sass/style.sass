@@ -1,9 +1,18 @@
+// Variables
+$white: #ffffff
+$bg__dark: #1c0d05
+$bg__section__dark: #181818
+$light: #5D5D5D
+
+
+
 *, *:before, *:after
 	margin: 0
 	padding: 0
 	box-sizing: border-box
 
 body
+	background-color: $bg__dark
 	font-family: sans-serif
 	scroll-behavior: smooth // плавный скрол
 	min-width: 320px
@@ -31,51 +40,127 @@ a
 .circle
 	width: 7px
 	height: 7px
-	background: #fff
+	background: $white
 	border-radius: 50px
 	display: inline-block
 
 // цвет при выделения текста
 ::selection
 	background-color: #989898
-	color: #fff
+	color: $white
 
 
 // header
-header.header
+.header
 	height: 100vh
-	background-image: url("../img/1.jpg")
+	background-image: url('../img/1.jpg')
 	background-repeat: no-repeat
 	background-size: cover
 	background-position-y: 70%
 	overflow: hidden
 	.header__background
 		height: 100vh
-		background: rgba(0, 0, 0, 0.600)
+		background: rgba(0, 0, 0, 0.6)
 	.container
 		height: 100%
 		display: flex
 		flex-direction: column
 		justify-content: space-between
-		z-index: 1
-	// header top + menu
-	nav.menu
+	// header top
+	.header__top
 		width: 100%
-		div.menu__top
-			z-index: 1
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		padding-top: 30px
+		// logo
+		a.logo
+			z-index: 201
 			display: flex
-			width: 100%
-			justify-content: space-between
-			padding-top: 30px
-			// Иконка гамбургер
-			div.menu__icon
+			align-items: center
+			color: #E1E8EB
+			font-family: 'Russo One', sans-serif
+			text-align: center
+			transition: color .2s ease
+			.logo__text
+				margin-left: 8px
+				.small__text
+					font-size: 13px
+			img
+				width: 50px
+			&:hover
+				color: #c2c2c2
+		.header__top--wrap
+			display: flex
+			align-items: flex-end
+			// language__list
+			ul.header__top--language__list
+				z-index: 201
+				font-size: 22px
+				// item
+				.language__item
+					padding-top: 8px
+					position: relative
+					top: -10px
+					right: 10px
+					display: inline-block
+					font-size: 18px
+					transition: all .25s ease-in-out
+					&:hover
+						.language__item--content
+							color: $light
+							span.triangle
+								top: -3px
+								border-top: 7px solid $light
+								transform: scale(1, -1)
+						ul.language__drop--list
+							top: 28px
+							opacity: 1
+							a
+								&:hover
+									color: $white
+					.language__item--content
+						color: #E1E8EB
+						user-select: none
+						transition: all .2s ease
+						// треугольник
+						span.triangle
+							border: 7px solid transparent
+							border-top: 7px solid #E1E8EB
+							display: inline-block
+							position: relative
+							top: 6px
+							left: -1px
+							transition: all .2s ease
+					// drop--list
+					ul.language__drop--list
+						position: absolute
+						top: -999px
+						left: 22px
+						opacity: 0
+						transition: opacity .2s ease
+						li
+							width: 200%
+							height: 30px
+							padding-top: 6px
+						a
+							color: #a8a8a8
+							padding-right: 50%
+							padding-bottom: 4px
+							transition: all .25s ease-in-out
+		// Гамбургер меню
+		nav.header__top--menu
+			display: flex
+			align-items: flex-end
+			// Иконка
+			.header__top--icon
 				z-index: 201
 				width: 45px
 				height: 35px
 				position: relative
 				cursor: pointer
-				margin-top: 7px
-				span
+				span // line 4x
 					display: block
 					position: absolute
 					height: 4px
@@ -86,105 +171,56 @@ header.header
 					left: 0
 					transform: rotate(180deg)
 					transition: .25s ease-in-out
-					// 👇 1 елемент span
+					// 1 line
 					&:nth-child(1)
 						top: 3px
-					// 👇 2-3 елемент span
-					&:nth-child(2), &:nth-child(3)
+					// 2-3 line
+					&:nth-child(2),
+					&:nth-child(3)
 						top: 13px
 						background: rgb(225, 232, 235)
-					// 👇 4 елемент span
+					// 4 line
 					&:nth-child(4)
 						top: 23px
-			// язик + logo
-			ul.right__list
-				z-index: 201
-				font-size: 22px
-				li.right__item
-					padding-top: 10px
-					position: relative
-					top: -10px
-					right: 10px
-					display: inline-block
-					font-size: 18px
-					&:hover
-						div.right__language
-							color: #5D5D5D
-						span.triangle
-							top: -3px
-							border-top: 7px solid #5D5D5D
-							transform: scale(1, -1)
-						ul.right__drop
-							top: 28px
-							opacity: 1
-							a
-								&:hover
-									color: #fff
-					div.right__language
-						color: #E1E8EB
-						user-select: none
-						transition: all .2s ease
-					ul.right__drop
-						position: absolute
-						top: -999px
-						left: 22px
-						opacity: 0
-						transition: opacity .2s ease
-						li
-							width: 200%
-							height: 30px
-						a
-							color: #a8a8a8
-							padding-right: 50%
-							padding-bottom: 10px
-				span.triangle
-					border: 7px solid transparent
-					border-top: 7px solid #E1E8EB
-					display: inline-block
-					position: relative
-					top: 6px
-					left: -1px
-					transition: all .2s ease
-				a.logo
-					div.logo__text
-						display: inline-block
-						color: #E1E8EB
-						font-family: 'Russo One', sans-serif
-						text-align: center
-					div.small__text
-						font-size: 13px
-			// Menu main
-			.menu__center.display__block
+				&:hover
+					span
+						background: #b0b0b0
+			// menu item
+			.header__top--menu__open.display__block
 				display: none
-			div.menu__center
-				background: #666666
-				background: linear-gradient(45deg, #1c0d05, rgba(21, 10, 4, 0.812)), url('../img/bg__trubi.jpg')
+			.header__top--menu__open
+				z-index: 200
+				background-color: $bg__dark
+				background: linear-gradient(45deg, #130b07, rgba(21, 10, 4, 0.812)), url('../img/bg__trubi.jpg')
 				background-repeat: no-repeat
 				background-size: cover
 				background-position-y: 70%
-				min-width: 100vw
+				width: 100vw
 				height: 100vh
-				z-index: 200
-				position: absolute
+				// position: absolute
+				position: fixed
 				top: 0
 				left: 0%
 				display: flex
 				justify-content: center
+				user-select: none
 				// display: none
-				ul.menu__list
+				.menu__open--list
 					display: flex
 					font-size: 21px
 					justify-content: center
 					flex-direction: column
 					text-align: center
 					width: 550px
-					div.menu__title
+					.h2
 						color: #E1E8EB
 						font-size: 50px
 						text-transform: uppercase
 						margin-bottom: 40px
 					li.menu__item
-						margin-bottom: 20px
+						padding-bottom: 13px
+						border-bottom: 2px solid rgba(255, 255, 255, 0.451)
+						margin-bottom: 13px
 						&:first-child // первый елемент
 							a.menu__link
 								padding-left: 0px
@@ -198,15 +234,16 @@ header.header
 							&:hover
 								color: rgb(107, 107, 107)
 	// center header
-	div.header__center
+	.header__center
+		z-index: 1
 		text-align: center
 		color: #E1E8EB
 		position: relative
 		top: -22%
-		h2.h2
+		.h2
 			font-size: 65px
 			font-family: 'Ubuntu Condensed', sans-serif
-		h3.h3
+		.h3
 			font-size: 25px
 	// telephone bottom
 	.telephone__bottom
@@ -216,10 +253,13 @@ header.header
 			text-align: center
 			width: 52px
 			height: 52px
+			border-radius: 50px
+			transition: background .25s ease-in-out
 			a
-				color: #fff
+				color: $white
 				font-size: 50px
 				padding: 0 10px
+				transition: color .25s ease-in-out
 			&:hover
 				a
 					color: #000
@@ -234,181 +274,225 @@ header.header
 			padding-bottom: 20px
 			.contact__item
 				font-family: 'Ubuntu Condensed', sans-serif
-				color: #fff
+				color: $white
 				font-size: 24px
+				a
+					color: $white
+					transition: color .25s ease-in-out
+					&:hover
+						color: #b0b0b0
 
 
 
-section.about__company
-	background: #181818
-	div.title
+.about__company
+	background: $bg__section__dark
+	overflow: hidden
+	.title
 		padding-top: 40px
 		padding-bottom: 40px
-		h2.h2
+		.h2
 			text-align: center
 			font-size: 44px
-			color: #fff
+			color: $white
 			font-family: 'Russo One', sans-serif
 	// text
-	div.about__company--text
-		background: #5D5D5D
+	.about__company--text
+		background: $light
 		padding-top: 50px
 		padding-bottom: 40px
 		padding-left: 50px
 		padding-right: 50px
-		color: #fff
+		color: $white
 		font-size: 22px
-		div.item__text1
+		.text__start
 			width: 100%
-		h4.h4
-			padding-top: 30px
-			padding-bottom: 10px
-			font-size: 28px
-		ul.list__text
+		.title__list
+			.h4
+				padding-top: 30px
+				padding-bottom: 10px
+				font-size: 28px
+		.text__list
 			margin-left: 40px
-			li.list__item
+			.item__list
 				width: 100%
+				padding-bottom: 10px
 				.circle
 					margin-right: 10px
 	// certificates
 	.certificates
 		background: #4D4646
-		padding-top: 60px
+		// padding-top: 60px
 		padding-bottom: 60px
 		div.flex__certificates
 			display: flex
+			flex-wrap: wrap
 			align-items: center
 			justify-content: space-around
 			a.products
+				margin-top: 60px
 				padding: 30px
-				border: 4px solid #5D5D5D
+				border: 4px solid $light
 				border-radius: 6px
 				display: flex
 				align-items: center
 				transition: all .25s ease-in-out
 				&:hover
-					background: #5D5D5D
+					background: $light
 				img
 					width: 100px
 				div.text
 					margin-left: 20px
 					position: relative
 					top: -6%
-					color: #fff
+					color: $white
 					font-size: 20px
+					text-align: center
 
 
 
 // gallery
-section.gallery
-	background: #181818
+.gallery
+	background: $bg__section__dark
 	padding-top: 40px
 	padding-bottom: 55px
 	overflow: hidden
+	.container
+		overflow: hidden
 	.title
 		padding-bottom: 40px
+		color: $white
+		text-align: center
 		.h2
-			text-align: center
+			margin-bottom: 10px
+			font-family: 'Russo One', sans-serif
+			text-transform: uppercase
 			font-size: 44px
 			letter-spacing: 3px
-			color: #fff
-			font-family: 'Russo One', sans-serif
+		.h3
+			font-size: 24px
 	ul.prev-next-navigation
 		li
 			z-index: 121
 			position: absolute
-			top: 50%
+			top: 45%
 			width: 35px
 			height: 38px
-			color: #fff
+			color: $white
 			font-size: 40px
 			transition: all .2s ease-in-out
-			overflow: hidden
 			cursor: pointer
 			line-height: 0
 			&:hover
 				color: rgba(181, 180, 178, 0.739)
 				opacity: 0.9
 		li.img__prev
-			left: -0.5%
+			left: -3%
 		li.img__next
-			right: -1%
+			right: 4.5%
 	ul.gallery__slider
+		// overflow: hidden
+		position: relative
+		left: 4%
 		div.siema__carousel
 			z-index: 20
-			width: 1215px
-			position: relative
-			left: 3%
+			width: 98%
 		li.slider__item
 			width: 320px
 			overflow: hidden
 			display: flex
 			flex-wrap: wrap
-			img
+			background-color: rgba(93, 93, 93, 0.239)
+			&:hover
+				img
+					transform: scale(1.45)
+			.item__img
 				width: 100%
 				height: 260px
-			.text
-				position: relative
-				top: 0%
-				width: 100%
-				height: 200px
+				padding: 0px 10px
+				overflow: hidden
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					width: 100%
+					height: auto
+					transition: all 0.35s ease-in-out
+			.item__text
 				padding: 20px 25px
-				background-color: #5D5D5D
-				color: #fff
-
+				width: 100%
+				color: $white
+				text-align: center
+				.h4
+					font-weight: normal
+					font-size: 18px
 
 
 
 // footer
-footer.footer
+.footer
 	background: #4D4646
-	// top
-	.footer__top--info
-		padding-top: 50px
+	overflow: hidden
+	// top--info__list
+	.footer__top--info__list
 		padding-bottom: 50px
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		color: #fff
-		h3.h3
-			user-select: none // запрет копирования
-			font-size: 27px
-			margin-bottom: 10px
-		div.text
-			padding-left: 20px
-			padding-right: 20px
-			font-size: 20px
-			a
-				color: #fff
-				transition: all .25s ease-in-out
-				&:hover
-					color: #8b8989
-		// schedule
-		.schedule
-			.text
-				display: flex
-				justify-content: space-between
-				user-select: none // запрет копирования
-				.day
-					margin-right: 20px
-		// contacts
-		.contacts
-			h4.h4
-				font-size: 20px
-				margin-top: 20px
-				margin-bottom: 8px
-		// address
-		.address
-			.map__wrap
-				margin-top: 20px
-				overflow: hidden
-				position: relative
-				width: 450px
-				height: 120px
-				iframe
-					position: absolute
-					top: -37px
-					left: -96px
+		color: $white
+		// item col 3x
+		.info__item
+			padding-top: 50px
+			.title
+				h3.h3
+					user-select: none // запрет копирования
+					font-size: 27px
+					margin-bottom: 10px
+			.item__schedule,
+			.item__contacts,
+			.item__address
+				.text
+					font-size: 20px
+					padding-left: 5px
+					padding-right: 20px
+					margin-bottom: 5px
+					a
+						color: $white
+						transition: all .25s ease-in-out
+						&:hover
+							color: #8b8989
+			// ГРАФІК РОБОТИ
+			.item__schedule
+				.text
+					display: flex
+					justify-content: space-between
+					user-select: none // запрет копирования
+					.day
+						margin-right: 20px
+			// contacts
+			.item__contacts
+				.fa-mobile
+					margin-right: 8px
+				.text
+					margin-bottom: 10px
+					.text__details
+						.h4
+							font-size: 20px
+							margin-top: 20px
+							margin-bottom: 8px
+						.details__code
+							margin-left: 20px
+			// address
+			.item__address
+				.map__wrap
+					margin-top: 30px
+					overflow: hidden
+					position: relative
+					width: 450px
+					height: 135px
+					iframe
+						position: absolute
+						top: -37px
+						left: -96px
 	// bottom
 	.footer__bottom--copyright
 		background: #1e1e1e
@@ -416,7 +500,7 @@ footer.footer
 		padding-top: 20px
 		padding-bottom: 20px
 		font-size: 18px
-		color: #fff
+		color: $white
 
 
 
