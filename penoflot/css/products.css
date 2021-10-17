@@ -620,7 +620,7 @@ section .container img {
 /* sectionS */
 @media screen and (min-width: 0px) and (max-width: 850px) {
   section .container img {
-    width: 95%;
+    width: 100%;
   }
   section .container .h2 {
     font-size: 20px;
