@@ -60,11 +60,12 @@ a
 	display: flex
 	justify-content: center
 	align-items: center
+	$margin-bg: 15px
 	.header__background
 		background-color: #5D5D5D
 		min-height: 95vh
-		width: 97vw
-		margin: 15px
+		width: 100%
+		margin: $margin-bg
 	.container
 		min-height: 97vh
 	//___ header__top ___
@@ -74,7 +75,7 @@ a
 		flex-wrap: wrap
 		align-items: center
 		justify-content: space-between
-		padding-top: 30px
+		padding-top: calc(30px - #{$margin-bg})
 		margin-bottom: 20px
 		// logo
 		a.logo
@@ -95,17 +96,16 @@ a
 				color: #c2c2c2
 		.header__top--wrap
 			display: flex
-			align-items: flex-end
+			align-items: center
 			//___ language__list ___
 			ul.header__top--language__list
 				z-index: 201
 				font-size: 22px
-				// item
+				min-height: 25px
+				min-width: 64px
+				position: relative
+				margin-right: 20px
 				.language__item
-					padding-top: 8px
-					position: relative
-					top: -10px
-					right: 10px
 					display: inline-block
 					font-size: 18px
 					transition: all .25s ease-in-out
@@ -117,7 +117,7 @@ a
 								border-top: 7px solid $light
 								transform: scale(1, -1)
 						ul.language__drop--list
-							top: 28px
+							top: 20px
 							opacity: 1
 							a
 								&:hover
@@ -155,10 +155,35 @@ a
 		nav.header__top--menu
 			display: flex
 			align-items: flex-end
+			.header__top--menu__list
+			.header__top--menu__item
+				transition: all 0.3s ease-in-out
+				position: relative
+				&:hover
+					.header__top--menu____link
+						color: #fff
+					transform: scale(1.15)
+				&::after // Линия подчеркивания с анимацией
+					display: block
+					position: absolute
+					left: 0%
+					bottom: 3%
+					width: 60%
+					height: 4px
+					background-color: rgba(255, 255, 255, 0.801)
+					content: ""
+					transition: width 0.3s ease-out
+				&:hover:after, &:focus:after
+					width: 100%
+					background-color: rgb(255, 255, 255)
+			.header__top--menu____link
+				font-size: 25px
+				line-height: 1.75
+				color: rgba(255, 255, 255, 0.906)
 			// Иконка
 			.header__top--icon
 				z-index: 201
-				width: 45px
+				width: 35px
 				height: 35px
 				position: relative
 				cursor: pointer
@@ -166,7 +191,7 @@ a
 					display: block
 					position: absolute
 					height: 4px
-					width: 75%
+					width: 100%
 					background: #E1E8EB
 					border-radius: 9px
 					opacity: 1
@@ -188,8 +213,8 @@ a
 					span
 						background: #b0b0b0
 			// menu item
-			.header__top--menu__open.menu__close // menu__close
-				display: none
+			.header__top--menu__open.menu__open // menu__open
+				display: flex
 			.header__top--menu__open
 				z-index: 200
 				background-color: $bg__dark
@@ -202,7 +227,7 @@ a
 				position: fixed
 				top: 0
 				left: 0%
-				display: flex
+				display: none
 				justify-content: center
 				user-select: none
 				.menu__open--list
@@ -233,24 +258,33 @@ a
 							transition: all .2s ease
 							&:hover
 								color: rgb(107, 107, 107)
-	//___ products ___
-	.products
+	//___ menu__products ___
+	.menu__products
 		height: 100%
 		width: 100%
 		margin: 0 auto
 		padding-top: 20px
 		padding-bottom: 50px
-		.flex__products
+		.h1
+			font-size: 36px
+			color: white
+			text-align: center
+			border-top: 8px solid rgba(255, 255, 255, 0.859)
+			border-bottom: 8px solid rgba(255, 255, 255, 0.859)
+			border-top-width:
+			border-radius: 9%
+			padding: 11px
+			margin: 0px 87px
+			margin-bottom: 30px
+		.menu__products--list
 			display: flex
-			// justify-content: space-between
 			justify-content: space-around
 			flex-wrap: wrap
-			// align-items: center
-			.flex__products--item
+			.menu__products--item
 				width: 40%
 				display: flex
 				justify-content: center
-				.product__link
+				.menu__products--link
 					display: flex
 					flex-direction: column
 					justify-content: space-around
@@ -264,12 +298,12 @@ a
 					padding: 18px
 					&:hover,
 					&:active
-						.background__hover
+						.background__hover--link
 							opacity: 1
-					.background__hover
+					.background__hover--link
 						width: 100%
 						height: 100%
-						background: #87888952
+						background: rgba(135, 136, 137, 0.322)
 						position: absolute
 						top: 0
 						left: 0
@@ -282,6 +316,7 @@ a
 						position: relative
 						z-index: 2
 						width: 220px
+						height: auto
 						&[src="img/menu pipes2.jpg"]
 							width: 135px
 
@@ -289,7 +324,7 @@ a
 
 section
 	padding-top: 50px
-	padding-bottom: 50px
+	padding-bottom: 75px
 	&:nth-child(even)
 		background-color: rgba(93, 93, 93, 0.612)
 	.container
@@ -305,6 +340,7 @@ section
 			margin-bottom: 50px
 		img
 			width: 850px
+			height: auto
 
 
 .truby__teploizolovani // 1
@@ -325,7 +361,7 @@ section
 	background: rgba(93, 93, 93, 0.42)
 	overflow: hidden
 	// top--info__list
-	.footer__top--info__list
+	.footer__top--list
 		padding-bottom: 50px
 		width: 100%
 		display: flex
@@ -333,7 +369,7 @@ section
 		justify-content: space-between
 		color: $white
 		// item col 3x
-		.info__item
+		.footer__top--item
 			padding-top: 50px
 			.title
 				.h3
@@ -392,12 +428,8 @@ section
 						position: absolute
 						top: 0
 						left: 0
-					// iframe
-					// 	position: absolute
-					// 	top: -37px
-					// 	left: -96px
 	// bottom
-	.footer__bottom--copyright
+	.footer__bottom.copyright
 		background: rgba(24, 24, 24, 0.329)
 		text-align: center
 		padding-top: 20px
@@ -406,7 +438,23 @@ section
 		color: $white
 
 
-
+//Кнопка наверх
+.button__up
+	width: 48px
+	height: 48px
+	display: none
+	border-radius: 50%
+	// position: fixed
+	right: 2%
+	bottom: 2%
+	background-color: rgba(24, 24, 25, 0.671)
+	color: #ffffff
+	font-size: 18px
+	text-align: center
+	padding: 9px
+.button__up--position
+	position: fixed
+	display: block
 
 
 

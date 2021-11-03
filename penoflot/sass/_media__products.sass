@@ -2,50 +2,54 @@
 	.container
 		width: 90%
 
-/* header */
-// @media screen and (min-width: 850px) and (max-width: 1250px)
 
+//___ header ___*/
 @media screen and (min-width: 0px) and (max-width: 850px)
 	.header
-		.products
-			.flex__products
-				flex-direction: column
-				align-content: center
-				.flex__products--item
+		.menu__products
+			.menu__products--list
+				.menu__products--item
 					width: 70%
-					.product__link
+					.menu__products--link
 						img
 							width: 99%
-
-// @media screen and (min-width: 0px) and (max-width: 600px)
-
+							height: 99%
 @media screen and (min-width: 0px) and (max-width: 500px)
 	.header
+		.container
+			width: 93%
 		.header__top
 			align-items: flex-end
 			a.logo
 				width: 155px
 				.logo__text
-					margin-left: -6px
+					padding: 0px 4px
+					margin-left: -13px
 					.small__text
 						font-size: 10px
 					.big__text
 						font-size: 15px
 				img
 					width: 35px
-		.products
-			.flex__products
-				.flex__products--item
+					height: 99%
+		.menu__products
+			.h1
+				width: 90%
+				margin-right: auto
+				margin-left: auto
+			.menu__products--list
+				.menu__products--item
 					width: 100%
 
 
 
-/* sectionS */
+//___ sectionS ___*/
 @media screen and (min-width: 0px) and (max-width: 850px)
 	section
 		.container
 			img
 				width: 100%
+				height: 100%
 			.h2
 				font-size: 20px
 
@@ -57,18 +61,18 @@
 
 
 
-/* footer */
+//___ footer ___*/
 @media screen and (min-width: 600px) and (max-width: 1250px)
 	.footer
-		.footer__top--info__list
+		.footer__top--list
 			justify-content: space-around
 @media screen and (min-width: 0px) and (max-width: 615px)
 	.footer
-		.footer__top--info__list
+		.footer__top--list
 			width: 275px
 			flex-direction: column
 			margin: 0 auto
-			.info__item
+			.footer__top--item
 				.item__schedule
 					.text
 						font-size: 17px
@@ -80,5 +84,3 @@
 						width: 275px
 						img
 							left: -85px
-						// iframe
-						// 	left: -159px

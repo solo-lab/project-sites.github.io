@@ -4,7 +4,7 @@
 
 
 
-/* header --- h2 + telephone__bottom */
+//___ header --- h2 + telephone__bottom ___*/
 @media screen and (min-width: 850px) and (max-width: 1250px)
 	.header
 		// center header
@@ -75,7 +75,7 @@
 
 
 
-/* about__company--text */
+//___ about__company--text ___*/
 @media screen and (min-width: 0px) and (max-width: 600px)
 	.about__company
 		.title
@@ -95,8 +95,8 @@
 			.text__list
 				margin-left: 20px
 		.certificates
-			div.flex__certificates
-				a.products
+			.certificates__wrap
+				.certificates__link
 					padding: 18px
 
 
@@ -104,7 +104,7 @@
 
 
 
-/* gallery Slider */
+//___ gallery Slider ___*/
 @media screen and (min-width: 0px) and (max-width: 1251px)
 	.gallery
 		.title
@@ -122,31 +122,31 @@
 				left: 8%
 			li.img__next
 				right: 10%
-		ul.gallery__slider
+		.gallery__slider
 			left: 1.5%
 			li.slider__item
 				margin: 0 auto
 @media screen and (min-width: 0px) and (max-width: 400px)
 	.gallery
-		ul.gallery__slider
+		.gallery__slider
 			li.slider__item
 				width: 95%
 
 
 
 
-/* footer */
+//___ footer ___*/
 @media screen and (min-width: 600px) and (max-width: 1250px)
 	.footer
-		.footer__top--info__list
+		.footer__top--list
 			justify-content: space-around
 @media screen and (min-width: 0px) and (max-width: 615px)
 	.footer
-		.footer__top--info__list
+		.footer__top--list
 			width: 275px
 			flex-direction: column
 			margin: 0 auto
-			.info__item
+			.footer__top--item
 				.item__schedule
 					.text
 						font-size: 17px
@@ -158,5 +158,3 @@
 						width: 275px
 						img
 							left: -85px
-						// iframe
-						// 	left: -159px
