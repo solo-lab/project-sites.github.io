@@ -94,17 +94,14 @@ a
 		.header__top--wrap
 			display: flex
 			align-items: center
+			line-height: 1.75
 			//___ language__list ___
 			ul.header__top--language__list
 				z-index: 201
-				font-size: 22px
-				min-height: 25px
-				min-width: 64px
+				font-size: 18px
 				position: relative
 				margin-right: 20px
 				.language__item
-					display: inline-block
-					font-size: 18px
 					transition: all .25s ease-in-out
 					&:hover
 						.language__item--content
@@ -153,30 +150,29 @@ a
 			display: flex
 			align-items: flex-end
 			.header__top--menu__list
-			.header__top--menu__item
-				transition: all 0.3s ease-in-out
-				position: relative
-				&:hover
-					.header__top--menu____link
-						color: #fff
-					transform: scale(1.15)
-				&::after // Линия подчеркивания с анимацией
-					display: block
-					position: absolute
-					left: 0%
-					bottom: 3%
-					width: 60%
-					height: 4px
-					background-color: rgba(255, 255, 255, 0.801)
-					content: ""
-					transition: width 0.3s ease-out
-				&:hover:after, &:focus:after
-					width: 100%
-					background-color: rgb(255, 255, 255)
-			.header__top--menu____link
 				font-size: 25px
-				line-height: 1.75
-				color: rgba(255, 255, 255, 0.906)
+				.header__top--menu__item
+					transition: all 0.3s ease-in-out
+					position: relative
+					.header__top--menu____link
+						color: rgba(255, 255, 255, 0.906)
+					&:hover
+						.header__top--menu____link
+							color: #fff
+						transform: scale(1.15)
+					&::after // Линия подчеркивания с анимацией
+						display: block
+						position: absolute
+						left: 0%
+						bottom: 3%
+						width: 60%
+						height: 4px
+						background-color: rgba(255, 255, 255, 0.801)
+						content: ""
+						transition: width 0.3s ease-out
+					&:hover:after, &:focus:after
+						width: 100%
+						background-color: rgb(255, 255, 255)
 			// Иконка
 			.header__top--icon
 				z-index: 201

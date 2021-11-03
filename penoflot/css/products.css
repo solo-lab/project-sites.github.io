@@ -136,20 +136,17 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 1.75;
 }
 
 .header .header__top .header__top--wrap ul.header__top--language__list {
-  z-index: 201;
-  font-size: 22px;
-  min-height: 25px;
-  min-width: 64px;
-  position: relative;
+  font-size: 18px;
   margin-right: 20px;
+  position: relative;
+  z-index: 201;
 }
 
 .header .header__top .header__top--wrap ul.header__top--language__list .language__item {
-  display: inline-block;
-  font-size: 18px;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
@@ -227,22 +224,30 @@ a {
           align-items: flex-end;
 }
 
-.header .header__top nav.header__top--menu .header__top--menu__item {
+.header .header__top nav.header__top--menu .header__top--menu__list {
+  font-size: 25px;
+}
+
+.header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: relative;
 }
 
-.header .header__top nav.header__top--menu .header__top--menu__item:hover {
+.header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item .header__top--menu____link {
+  color: rgba(255, 255, 255, 0.906);
+}
+
+.header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.header .header__top nav.header__top--menu .header__top--menu__item:hover .header__top--menu____link {
+.header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item:hover .header__top--menu____link {
   color: #fff;
 }
 
-.header .header__top nav.header__top--menu .header__top--menu__item::after {
+.header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item::after {
   display: block;
   position: absolute;
   left: 0%;
@@ -255,15 +260,9 @@ a {
   transition: width 0.3s ease-out;
 }
 
-.header .header__top nav.header__top--menu .header__top--menu__item:hover:after, .header .header__top nav.header__top--menu .header__top--menu__item:focus:after {
+.header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item:hover:after, .header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item:focus:after {
   width: 100%;
   background-color: white;
-}
-
-.header .header__top nav.header__top--menu .header__top--menu____link {
-  font-size: 25px;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.906);
 }
 
 .header .header__top nav.header__top--menu .header__top--icon {
@@ -670,13 +669,8 @@ section .container img {
   .header .container {
     width: 93%;
   }
-  .header .header__top {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
   .header .header__top a.logo {
-    width: 155px;
+    width: 135px;
   }
   .header .header__top a.logo .logo__text {
     padding: 0px 4px;
@@ -691,6 +685,13 @@ section .container img {
   .header .header__top a.logo img {
     width: 35px;
     height: 99%;
+  }
+  .header .header__top .header__top--wrap ul.header__top--language__list {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .header .header__top nav.header__top--menu .header__top--menu__list {
+    font-size: 16px;
   }
   .header .menu__products .h1 {
     width: 90%;
