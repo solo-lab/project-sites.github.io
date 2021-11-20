@@ -27,6 +27,8 @@ a
 	margin: 0 auto
 	width: 1200px
 	position: relative
+	@media screen and (min-width: 0px) and (max-width: 1250px)
+		width: 90%
 
 // исправлять баги
 .clearfix
@@ -61,6 +63,9 @@ a
 	justify-content: center
 	align-items: center
 	$margin-bg: 15px
+	.container
+		@media screen and (min-width: 0px) and (max-width: 500px)
+			width: 93%
 	.header__background
 		background-color: #5D5D5D
 		min-height: 95vh
@@ -86,12 +91,25 @@ a
 			font-family: 'Russo One', sans-serif
 			text-align: center
 			transition: color .2s ease
+			@media screen and (min-width: 0px) and (max-width: 500px)
+				width: 135px
 			.logo__text
 				margin-left: 8px
+				@media screen and (min-width: 0px) and (max-width: 500px)
+					padding: 0px 4px
+					margin-left: -13px
 				.small__text
 					font-size: 13px
+					@media screen and (min-width: 0px) and (max-width: 500px)
+						font-size: 10px
+				.big__text
+					@media screen and (min-width: 0px) and (max-width: 500px)
+						font-size: 15px
 			img
 				width: 50px
+				@media screen and (min-width: 0px) and (max-width: 500px)
+					width: 35px
+					height: 99%
 			&:hover
 				color: #c2c2c2
 		.header__top--wrap
@@ -104,6 +122,9 @@ a
 				margin-right: 20px
 				position: relative
 				z-index: 201
+				@media screen and (min-width: 0px) and (max-width: 500px)
+					font-size: 16px
+					margin-right: 10px
 				.language__item
 					transition: all .25s ease-in-out
 					&:hover
@@ -154,6 +175,8 @@ a
 			align-items: flex-end
 			.header__top--menu__list
 				font-size: 25px
+				@media screen and (min-width: 0px) and (max-width: 500px)
+					font-size: 16px
 				.header__top--menu__item
 					transition: all 0.3s ease-in-out
 					position: relative
@@ -271,6 +294,10 @@ a
 			padding: 11px
 			margin: 0px 87px
 			margin-bottom: 30px
+			@media screen and (min-width: 0px) and (max-width: 500px)
+				width: 90%
+				margin-right: auto
+				margin-left: auto
 		.menu__products--list
 			display: flex
 			justify-content: space-around
@@ -279,6 +306,10 @@ a
 				width: 40%
 				display: flex
 				justify-content: center
+				@media screen and (min-width: 0px) and (max-width: 850px)
+					width: 70%
+				@media screen and (min-width: 0px) and (max-width: 500px)
+					width: 100%
 				.menu__products--link
 					display: flex
 					flex-direction: column
@@ -314,6 +345,9 @@ a
 						height: auto
 						&[src="img/menu pipes2.jpg"]
 							width: 135px
+						@media screen and (min-width: 0px) and (max-width: 850px)
+							width: 99%
+							height: 99%
 
 //___ sectionS ___
 
@@ -333,9 +367,14 @@ section
 			text-align: center
 			font-size: 30px
 			margin-bottom: 50px
+			@media screen and (min-width: 0px) and (max-width: 850px)
+				font-size: 20px
 		img
 			width: 850px
 			height: auto
+			@media screen and (min-width: 0px) and (max-width: 850px)
+				width: 100%
+				height: 100%
 
 
 .truby__teploizolovani // 1
@@ -363,6 +402,12 @@ section
 		flex-wrap: wrap
 		justify-content: space-between
 		color: $white
+		@media screen and (min-width: 600px) and (max-width: 1250px)
+			justify-content: space-around
+		@media screen and (min-width: 0px) and (max-width: 615px)
+			width: 275px
+			flex-direction: column
+			margin: 0 auto
 		// item col 3x
 		.footer__top--item
 			padding-top: 50px
@@ -391,6 +436,9 @@ section
 					justify-content: space-between
 					user-select: none // запрет копирования
 					width: 270px
+					@media screen and (min-width: 0px) and (max-width: 615px)
+						font-size: 17px
+						width: 240px
 					.day
 						margin-right: 20px
 			// contacts
@@ -404,16 +452,19 @@ section
 							font-size: 20px
 							margin-top: 20px
 							margin-bottom: 8px
-						.details__code
-							margin-left: 20px
 			// address
 			.item__address
+				.text
+					@media screen and (min-width: 0px) and (max-width: 615px)
+						font-size: 17px
 				.map__wrap
 					margin-top: 40px
 					overflow: hidden
 					position: relative
 					width: 450px
 					height: 135px
+					@media screen and (min-width: 0px) and (max-width: 615px)
+						font-size: 17px
 					a
 						display: block
 						position: relative
@@ -423,6 +474,8 @@ section
 						position: absolute
 						top: 0
 						left: 0
+						@media screen and (min-width: 0px) and (max-width: 615px)
+							left: -85px
 	// bottom
 	.footer__bottom.copyright
 		background: rgba(24, 24, 24, 0.329)
@@ -457,4 +510,4 @@ section
 
 
 
-@import "_media__products"
+// @import "_old__media/_media__products"

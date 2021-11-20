@@ -27,6 +27,12 @@ a {
   position: relative;
 }
 
+@media screen and (min-width: 0px) and (max-width: 1250px) {
+  .container {
+    width: 90%;
+  }
+}
+
 .clearfix {
   content: " ";
   display: table;
@@ -68,6 +74,12 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .container {
+    width: 93%;
+  }
 }
 
 .header .header__background {
@@ -113,16 +125,48 @@ a {
   transition: color .2s ease;
 }
 
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .header__top a.logo {
+    width: 135px;
+  }
+}
+
 .header .header__top a.logo .logo__text {
   margin-left: 8px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .header__top a.logo .logo__text {
+    padding: 0px 4px;
+    margin-left: -13px;
+  }
 }
 
 .header .header__top a.logo .logo__text .small__text {
   font-size: 13px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .header__top a.logo .logo__text .small__text {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .header__top a.logo .logo__text .big__text {
+    font-size: 15px;
+  }
+}
+
 .header .header__top a.logo img {
   width: 50px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .header__top a.logo img {
+    width: 35px;
+    height: 99%;
+  }
 }
 
 .header .header__top a.logo:hover {
@@ -144,6 +188,13 @@ a {
   margin-right: 20px;
   position: relative;
   z-index: 201;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .header__top .header__top--wrap ul.header__top--language__list {
+    font-size: 16px;
+    margin-right: 10px;
+  }
 }
 
 .header .header__top .header__top--wrap ul.header__top--language__list .language__item {
@@ -226,6 +277,12 @@ a {
 
 .header .header__top nav.header__top--menu .header__top--menu__list {
   font-size: 25px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .header__top nav.header__top--menu .header__top--menu__list {
+    font-size: 16px;
+  }
 }
 
 .header .header__top nav.header__top--menu .header__top--menu__list .header__top--menu__item {
@@ -401,6 +458,14 @@ a {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .menu__products .h1 {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .header .menu__products .menu__products--list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,6 +484,18 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  .header .menu__products .menu__products--list .menu__products--item {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .header .menu__products .menu__products--list .menu__products--item {
+    width: 100%;
+  }
 }
 
 .header .menu__products .menu__products--list .menu__products--item .menu__products--link {
@@ -471,6 +548,13 @@ a {
   width: 135px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  .header .menu__products .menu__products--list .menu__products--item .menu__products--link img {
+    width: 99%;
+    height: 99%;
+  }
+}
+
 section {
   padding-top: 50px;
   padding-bottom: 75px;
@@ -504,9 +588,22 @@ section .container .h2 {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  section .container .h2 {
+    font-size: 20px;
+  }
+}
+
 section .container img {
   width: 850px;
   height: auto;
+}
+
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  section .container img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .footer {
@@ -526,6 +623,24 @@ section .container img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #ffffff;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1250px) {
+  .footer .footer__top--list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 615px) {
+  .footer .footer__top--list {
+    width: 275px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
 }
 
 .footer .footer__top--list .footer__top--item {
@@ -578,6 +693,13 @@ section .container img {
   width: 270px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 615px) {
+  .footer .footer__top--list .footer__top--item .item__schedule .text {
+    font-size: 17px;
+    width: 240px;
+  }
+}
+
 .footer .footer__top--list .footer__top--item .item__schedule .text .day {
   margin-right: 20px;
 }
@@ -596,8 +718,10 @@ section .container img {
   margin-bottom: 8px;
 }
 
-.footer .footer__top--list .footer__top--item .item__contacts .text .text__details .details__code {
-  margin-left: 20px;
+@media screen and (min-width: 0px) and (max-width: 615px) {
+  .footer .footer__top--list .footer__top--item .item__address .text {
+    font-size: 17px;
+  }
 }
 
 .footer .footer__top--list .footer__top--item .item__address .map__wrap {
@@ -606,6 +730,12 @@ section .container img {
   position: relative;
   width: 450px;
   height: 135px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 615px) {
+  .footer .footer__top--list .footer__top--item .item__address .map__wrap {
+    font-size: 17px;
+  }
 }
 
 .footer .footer__top--list .footer__top--item .item__address .map__wrap a {
@@ -619,6 +749,12 @@ section .container img {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media screen and (min-width: 0px) and (max-width: 615px) {
+  .footer .footer__top--list .footer__top--item .item__address .map__wrap img {
+    left: -85px;
+  }
 }
 
 .footer .footer__bottom.copyright {
@@ -647,99 +783,4 @@ section .container img {
 .button__up--position {
   position: fixed;
   display: block;
-}
-
-@media screen and (min-width: 0px) and (max-width: 1250px) {
-  .container {
-    width: 90%;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 850px) {
-  .header .menu__products .menu__products--list .menu__products--item {
-    width: 70%;
-  }
-  .header .menu__products .menu__products--list .menu__products--item .menu__products--link img {
-    width: 99%;
-    height: 99%;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 500px) {
-  .header .container {
-    width: 93%;
-  }
-  .header .header__top a.logo {
-    width: 135px;
-  }
-  .header .header__top a.logo .logo__text {
-    padding: 0px 4px;
-    margin-left: -13px;
-  }
-  .header .header__top a.logo .logo__text .small__text {
-    font-size: 10px;
-  }
-  .header .header__top a.logo .logo__text .big__text {
-    font-size: 15px;
-  }
-  .header .header__top a.logo img {
-    width: 35px;
-    height: 99%;
-  }
-  .header .header__top .header__top--wrap ul.header__top--language__list {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  .header .header__top nav.header__top--menu .header__top--menu__list {
-    font-size: 16px;
-  }
-  .header .menu__products .h1 {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .header .menu__products .menu__products--list .menu__products--item {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 850px) {
-  section .container img {
-    width: 100%;
-    height: 100%;
-  }
-  section .container .h2 {
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1250px) {
-  .footer .footer__top--list {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 615px) {
-  .footer .footer__top--list {
-    width: 275px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0 auto;
-  }
-  .footer .footer__top--list .footer__top--item .item__schedule .text {
-    font-size: 17px;
-    width: 240px;
-  }
-  .footer .footer__top--list .footer__top--item .item__address .text {
-    font-size: 17px;
-  }
-  .footer .footer__top--list .footer__top--item .item__address .map__wrap {
-    width: 275px;
-  }
-  .footer .footer__top--list .footer__top--item .item__address .map__wrap img {
-    left: -85px;
-  }
 }

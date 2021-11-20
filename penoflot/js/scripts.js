@@ -2,12 +2,12 @@
 
 
 
-//* Плавный скрол по якорю 👇
+//*___ Плавный скрол по якорю  ___*/
 /* var */
 const animationTime = 600; // Время анимации
 const framesCount = 100;   // Количество кадров
 // масив якорей на странице
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+const anchors = [].slice.call(document.querySelectorAll('a[href^="#"]:not([href="#"])'));
 
 anchors.forEach(function(item) {
   // каждому якорю присваиваем обработчик события
@@ -39,16 +39,15 @@ anchors.forEach(function(item) {
 });
 
 
-
-//* Menu (open + close) 👇
+//*___ Menu (open + close) ___*/
 /* ? На странице используеться слайдер с классом '.siema__carousel'? */
 const menuElement__OpenClose = document.querySelector('.header__top--menu__open');
 
-if (null !== menuElement__OpenClose ) {
+if ( null !== menuElement__OpenClose ) {
   /* var */
   const iconClass                = document.querySelector('.header__top--icon');
   let bodyTag                    = document.querySelector('body');
-  const openMenu__class         = 'menu__open';
+  const openMenu__class          = 'menu__open';
 
   /* Открыть / закрыть меню --- по клику на иконку */
   iconClass.addEventListener('click', function() {
@@ -60,6 +59,7 @@ if (null !== menuElement__OpenClose ) {
       /* Добавить / убрать класс "openMenu__class" */
       menuElement__OpenClose.classList.toggle(openMenu__class);
   });
+
   /* Закрыть меню --- по клику на пункт меню(ссылку из меню) */
   let menuLinkArr = document.querySelectorAll('.menu__link');
   for (let i = 0; i < menuLinkArr.length; i++) {
@@ -78,7 +78,7 @@ if (null !== menuElement__OpenClose ) {
 
 
 
-//* Slider 👇 *//
+//*___ Slider ___*/
 
 /* ? На странице используеться слайдер с классом '.siema__carousel'? */
 const sliderClassOnPage = document.querySelector('.siema__carousel');
@@ -115,8 +115,8 @@ if ( null !== sliderClassOnPage ) {
 /* -------------------------------------------------------------- */
 
 
-//* Кнопка наверх 👇 */
-var scrollToTopBtn = document.getElementById("button__up");
+//*___ Кнопка наверх ___*/
+var scrollToTopBtn = document.getElementById('button__up');
 var rootElement = document.documentElement; // var rootElement = document.body;
 
 
@@ -127,14 +127,10 @@ function scrollToTop() {
     /* как добавляет плавность шагам на Npx = currentScroll - (currentScroll / 10)? */
     window.requestAnimationFrame(scrollToTop);
     window.scrollTo(0, currentScroll - (currentScroll / 10));
-    // setTimeout(function() {
-    //   if (currentScroll != 0 ) {
-    //     window.scrollTo(0, 0)
-    //   }
-    // }, 200)
   }
+  else { window.scrollTo(0, 0); } /* переместиться на top: 0 */
 }
-scrollToTopBtn.addEventListener("click", scrollToTop);
+scrollToTopBtn.addEventListener('click', scrollToTop);
 
 
 function handleScroll() {
@@ -142,10 +138,11 @@ function handleScroll() {
   var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
   if ((rootElement.scrollTop / scrollTotal ) > 0.10 ) {
     // Show button
-    scrollToTopBtn.classList.add("button__up--position");
+    scrollToTopBtn.classList.add('button__up--position');
   } else {
     // Hide button
-    scrollToTopBtn.classList.remove("button__up--position");
+    scrollToTopBtn.classList.remove('button__up--position');
   }
 }
-document.addEventListener("scroll", handleScroll);
+document.addEventListener('scroll', handleScroll);
+
