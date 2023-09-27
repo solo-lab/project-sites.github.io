@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>University site</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="signup__logo-header">
+				<a href="index.html" class="logo">Start Bootstrap</a>
+				<button class="signup-button">Sign Up</button>
+			</div>
+		</div>
+
+		<div class="header__e-mail">
+			<div class="container">
+				<div class="center__button">
+					<div class="center__h1">
+						<h1 class="h1">Generate more leads with a professional landing page!</h1>
+					</div>
+					<form class="email">
+						<input type="email" class="user__email" name="email" placeholder="Email Address">
+						<a href="#" class="button">Submit</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="section_1" id="section_1">
+		<div class="container">
+			<div class="inner">
+				<div class="inner__item">
+					<img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAuBJREFUeF7t3GFW2kAQB/DdTf0mlp5EbyCeoPYgpdygegPEi+AJoDfQk4il30o2nbTVx1M2M0PGoOyfr/7ZZH+ZTd5i3niHj6mANx0NgzmAGhcBQAFqLGA8HCoUoMYCxsOhQgFqLGA8HCp0l6D9UdUvY3laOX9ifB5vcjjvqtsiFD8WY7+QnqCoQmvIVYzfKDyigfvSwfckt6icG38I4UoCy4LWmDHGGQ2aRVWmioCgbkMIZxwqC9r7upo57wd7Um3tplH56fI6fGkapBH0cPR74GOYtTuL/fp2FeLZr/HBvKGS0xPuDePUuerzfpG0nY2/WU7C+Zag5X2GDyFOfLGcFJ+2BaVn0eYP3SsuuSO/57/TxL+nzp9Ak7fKxntob1gmQZsGfc+Qj+e+7dwBmrj6ADVeFlmDSid/NCwvUvfG+pnwc1JcYMmTAEB3tDxRoUJ4VKgQShoDqFRKmAOoEEoaA6hUaoc56UV6forYKWGn1E3Zdl6htON42lV0M8Vuj0JLNzm/V/m1qdvpva2jAdT4egAUoMYCxsOhQgFqLGA83KtUKP5Jt/kqYaeEnZLx+gUoQLsRMD5K53t5vOiAh5KqhlGhKi4+DFDeSJUAqIqLDwOUN1IlAKri4sMA5Y1UCYCquPgwQHkjVQKgKi4+DFDeSJUAqIqLDwOUN1IlAKri4sMA5Y1UCYCquPgwQHkjVQKgKi4+DFDeSJUAqIqLDwOUN1IlAKri4sOdg+KV8M0XhXu3qW4A9ZG/nlklHuidhGTvKgYUTVxelkqLJi5oM/SSs1WboXq43nA1d86fZrWok5Ntrs76a2xnsX8NBCOhuuPMUe+KEAatW7XViP/7343oyV43E8ztIfVAVTdeb5/RVFhsha5/+W+1upLat+XR7rIK1O7SFXOuKteNVKCZL3nR9AEqYpKHACq3EiUBKmKShwAqtxIlASpikocAKrcSJQEqYpKHACq3EiUBKmKSh/4AGL0lcw4EZdEAAAAASUVORK5CYII="
+						alt="" />
+						<div class="inner__text">
+							<h6 class="h6">Fully Responsive</h6>
+							<div class="text">This theme will look great any divice,no matter the size!</div>
+						</div>
+				</div>
+				<div class="inner__item">
+					<img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAA9BJREFUeF7tnF920kAUxucPPim17kBXYLuC0hUIO6gLKMYVFFdgCgvQHYgraFhB6Qp0CWnRJ8lMJxDOwUrgTrxkwjkfzzff3PnluzPkDkQKfFgJSFY1iAkAZTYBgAIoMwFmOTgUQJkJMMvBoQDKTIBZDg5tEtDnkT3RxpwZIY6Z8/KWk8JOtdKTNJap98WMF1Ry6IvoT0dm8kpI2WHMhUMqtULELaWuQ4H1Btq+nF84kF84Zr8vDTepqVLqPARUL6ALZxp1sy8QrLpWjmcj1WPVJIh5AXXuvGlgmZdO0ypz/it+lhA4sIWQgeYbkDLmlm3kWoTk99lQdWsZqhiEDPToMousFJ/rTI5hrHQ21K8YdMgSdKD9bOB20KvNynYihay1tNbzKM9LCAeUPEcytS2B5MGOtgB1Ip8ehnrAkVAVjXY/c0w3fwC0AlEArQBt2yUACqBCYA2luQCbEo0TOQpAyahogQBK40SOAlAyKloggNI4kaOCAj2O7PHcmA9KiK571DkhZ72/wFRYmVidXVftUgUDWjSq82ZL8OOTjffH2kRr3fNtUgcBeghd/xxy3vl3PYpTn4KoHWhe5pkxPxrrzCf0fBs/tQPd9sTl44QaY1Ot1Btq6YcAetuQDYh+T5TtzeLWmHJB7UC3dYYoCYeI8Sn7RgGt2gzmaN9xNX8AtLA8gK7VPhxashCi5AswPos2h5ue3g8OTZQ8Sn5JgMNNcCizmwAUQP/dhrkWbZQ88xdfAAXQvC9K/u0WHj2ZDQOgTQQaoqVGHZP6OMu16ZId2o7mXWHkN+pEGhJ354CSTlNrB1qcBf10oF42BNbONHw2k9qB5tkf2HnQvTsLek09CwoCtHBp4ti+3WmP0AEe50C7zOLjdPIauuKzhJq5Ayt5FppZyfj3QtkL6qHaSiOIQ9cnsPxXnY6EsJ2GrKt3zh1j95fEmFrm6/MJDrSqO/fx6Fk1FwDlIFeiAYcywwVQAF0SwBrK7AQABdD99EO5uMKhXCQLHQAF0MMtefdD3AHz/SPLSeseoUtem7TX5gg5w5JAV/L5i6oOpqeaT0Na8fFhpGPK3L27TRTRbTHtvnGdKvvuf3XqvN4odfo7llPKmLUDPah3Py0I2sls2OpQYC7cTA3kjGv350mD+6l/TdXHncGAHkzn39r3s1Hrq4+Zgjg0TzCHaoyJ3M7umtRN26TsxCgdUdfNdeDBgK6SWLhVZK77L0nHvT5u8Y61Is20SqqAXI0VHKj3pBt+AYAy3yAABVBmAsxycCiAMhNgloNDAZSZALMcHAqgzASY5R4BeZMhgoht1LUAAAAASUVORK5CYII="
+						alt="" />
+					<h6 class="h6"> Bootstrap 5 Ready</h6>
+					<div class="text">Featuring the latest build of the new Bootstrap 5 framework!</div>
+				</div>
+				<div class="inner__item">
+					<img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAA1lJREFUeF7t3E1rE1EUBuB7ZxIFTVNFFLoRunaj1J8i7rrQlUIzVehCN60foIIftQkIbvoPXLj1Jyiigjs3uhEULTSJG8nM9QykErSZmU7e1Hucd3YlM2/ueXLuZNKbjDXcoAIWmsYwQ1BwExCUoGABcBw7lKBgAXAcO5SgYAFwHDuUoGABcBw7lKBgAXAcO/RfgTZa7ri1yYo1dsEZd1rGcQw8Ft/ivkutb6TWV6YePOo9tN+KDLBQhzajwaIztiOBs0VC/8N9toxxF3vt2vO82nJBm604ctZs5AVV4XFn3bn+Ru1ZVq2ZoLNLbj4Jkg8SEFYBrECNfZn+81nTPxO0uRw/cc5cLvBEldnFGbPab4e3xxWcCToTxZ/lwLnKaBUoVEBfC+jZsqA/5cB6geep0i7dXjsc++ac16Hyguy+SWjuG5pmZZmdpWon6JhXnaDg6UBQgoIFwHHsUIKCBcBx7NCqgcorfldq3pbr13vg2qcS53WHDjGvpZVbZ652O+HjqSgAQ70FbUbxDfnIsTZaqwZUL0FlUGlXplP9r813VO9AszB3dH1G9RF0ReDu553WfEX1DjSFlEGpRfUSVDOqt6BaUb0G1YjqPWiKKot+S7Lol67vZ24+vFGpANWEqgZUCypB884je3xcDaiW86gKUC2Yw6sSv5eRNWF6D6rxI6i3U14jprcdqhXTS1A0ZtYU3OMV0e/ds76f5d2UR/+DufKgaRs0WvGqteYmYgmEoEPF0RXPSZY+CDrSlohlZIL+Mc8by/F6kJhPZdfkCVr2rXfMcQQFg+53nHeXTfsNgH4+goJFCUpQsAA4jh1KULAAOG5aHdqXcR4Gj1V7XE/+S9UcV0T2L+la8Xu5f+Mp7QLg8b8T0PSOFrtueT9NvCNHXQcPSHWcfPNlrd8Jb5UCPXTFzYVJ8lEOPqBaATf4HzYMTnbXrdwyo0SHpofMRIML8lODTdyY9CZNfIuMndIb0eC83CHmqfx9RC/HBCN35mtgksXtTv1FXkrh37w3LrkT9mAi30i2C8a5MxJ8NC9c+eNfnLNvA+te1lzwYKtju0XqKQxaJIz7SLsRAStAUKwnOxTsSVCCogXAeTyHEhQsAI5jhxIULACOY4cSFCwAjmOHEhQsAI77BdknhXNbLbeTAAAAAElFTkSuQmCC"
+						alt="" />
+					<h6 class="h6">Easy to Use</h6>
+					<div class="text">Ready to use with your own content, or customize the sourse files!</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section_2" id="section_2">
+		<div class="inform">
+			<div class="text">
+				<div class="text__wrap">
+					<h5 class="h5">Fully Responsive Design</h5>
+					<p>When you use a theme created by Start Bootstrap, you know that the theme will look great on any
+						device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+				</div>
+			</div>
+			<div class="photo">
+				<img src="/img/phone.jpg" alt="">
+			</div>
+		</div>
+		<div class="inform reverse">
+			<div class="text">
+				<div class="text__wrap">
+					<h5 class="h5">Fully Responsive Design</h5>
+					<p>When you use a theme created by Start Bootstrap, you know that the theme will look great on any
+						device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+				</div>
+			</div>
+			<div class="photo">
+				<img src="/img/coding.jpg" alt="">
+			</div>
+		</div>
+		<div class="inform">
+			<div class="text">
+				<div class="text__wrap">
+					<h5 class="h5">Fully Responsive Design</h5>
+					<p>When you use a theme created by Start Bootstrap, you know that the theme will look great on any
+						device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+				</div>
+			</div>
+			<div class="photo">
+				<img src="/img/laptop.jpg" alt="">
+			</div>
+		</div>
+		</div>
+	</section>
+	<section class="section_3" id="section_3">
+		<div class="container">
+			<h5 class="h5">What people are saying...</h5>
+			<div class="contact__people">
+				<div class="item__contact">
+					<img src="/img/margaret.webp" alt="">
+					<h3 class="h3">Margaret E.</h3>
+					<div class="text">"This is fantastic! Thanks so mush guys!"</div>
+				</div>
+				<div class="item__contact">
+					<img src="/img/fred.webp" alt="">
+					<h3 class="h3">Fred S.</h3>
+					<div class="text">This theme will look great any divice,no matter the size!</div>
+				</div>
+				<div class="item__contact">
+					<img src="/img/sarah.webp" alt="">
+					<h3 class="h3">Sarah W.</h3>
+					<div class="text">This theme will look great any divice,no matter the size!</div>
+				</div>
+			</div>
+		</div>
+	</section>
+ <section class="section_4" id="section_4">
+		 <div class="container">
+			 <div class="section_4--wrap">
+			 <div class="center--item">
+					 <h2 class="h2">Ready to get started? Sign up now!</h2>
+					 <form class="email">
+						<input type="email" class="user__email" name="email" placeholder="Email Address">
+						<a href="#" class="button">Submit</a>
+					</form>
+				</div>
+		 </div>
+	 </div>
+ </section>
+
+ <footer class="footer" id="footer">
+	<div class="container">
+		<div class="footer--item">
+
+		<div class="link-footer">
+			<ul class="item--link">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</ul>
+			<p>
+				© Your Website 2023. All Rights Reserved.
+			</p>
+		</div>
+		<div class="icon--foter">
+
+				<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA5tJREFUaEPtmWteGjEQwDNZ+qli7QmKJ6ieQHqC6gmUAwDrCWpP4AoHkJ5AeoLKCbQnKNwAhX4qSZzQXQpLsnls8NE23/glO5n/PDKTAOSFD3jh+pP/AE/twWAeeB2LvYjzAyGgDiBqgpC9ZTjc6Bbnhjh3zSgd/EzgNgR8KYCdWNRmgrdBkENUpuao0FAA6VeAXowTGDp+u1juBYCK7zDBz4kgJ74br3wHpBcBPUWQsas8Z4BqPDskHC5xox3XzQzrx4SKxiSp9F3kOgFU2+wymNV1WqI3JhdRwxbCCmAeMkxcEhAy1jc/BPSjCBo2IWUFUG3yq0dTPjMPQky69MhkLSNA4LAZESLSEwcOTMrhUXwx7URx0bpCgDRhr0wbFc+LAaEk0SWnPIoZ5z+0Mqg4KkpsLcA87n8L9j9tBJ4q3UrPZIBqi6GxtWMcUbqrywctAAqVGx+bNtfOWyovvzcA4MGnDyUlgNGtRioxmHQqdeOydIEJQC5LvZDmzx/JSoCtFktwom2rwNo6B+vbeECu0XlBCYAWkbFf8wVAa73VxWy1NTueF0MA2ey55Ndw0ol28zqtAciuknJ+46u8/A43UhumOZOKyzbEa3BK9/Nd7NpG2y12hu765LVD+pEWoDW7JsR8/uv2xq739L4bJcvzawDVFsdmSnx8jgAI/3XSoSvtjMoDN/nLiCvMxjyAl6L7TrRv8EBhUbFi2RSAKr8UIfRPAbgVLJX7tpssxqvluZVrFSecygPysv3eTmAAALdT7zuGZ/6xYFVVLDQOR115gLL7lTxGQwC4VH2bY9QpJoMAFLXSK+FhVchcOlH5WMUFXbsxTbswUOWQbFOAkTfZHADDfgt6dvmm7kh1zdwQhb6zFZxft6E6MEK5CLw6lABl+6FNAKCin7EKn1kBpNdJ6YWFu128sQGAO2zRa6oWXXulLOOF0AA660ujmi71Xl4IDKC1fiGAnNyKf9WB028u4SPXhgQQlH+YJq+wuKqH8WHL534cCqD0w1bG7PrEEgjgC8o5MXnf6AEfiAAAVsobcyBPbxtOZQBswmZZL2sPZB+lid3D39pK7QkwwoQ9KUpYVTg5A0ghaaGTrwPygr1W7BwB7lBGHwtVbPN/QB7CCyATIkE45zG6XSbbwiOWACPcvEcpTXwUz3QoBbBsjfnfrIzXBUA9//SRrZPVHV/lxiyi18/ib1bTEfcY88E88BjKBkvip1L2rwR4AD6Z0UDC3AZRAAAAAElFTkSuQmCC"/></a>
+
+				<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA1xJREFUaEPtWNFxGjEQ3ZXIV0xCKjCpILgCSAXBFRgXYHKpILiCACkgdgWxKwhUYFxBcAW2g/MVTpvVHUwYrJN0pwsez5xmjJlBq9v39ulpTwjPfOAzzx8qAE9dwaoCVQUCGagklIfARkSNpVIfEaGJBC0CaAHRBATOCdX5w/DFxLSejrsb4p3pt8wKcFCTg+Z5ErTN3Yv+dFCJbzynmTmPwUgpD9fJ6hwY8BECHizGopsLQL2vLgDpdjGSx6EgXvXjAbP92WcdZnSmECaCoJNUiAcJ9T6rOsYK6JLFSt0mD0Q4CwGxYv6HT/IZDJ/+GstBVrwRwKOHFgSxIuLKKhsLMt4nnxSIKxCqy9/fLMaytz3dD0BSCJjFQhz/HuLMl836ybIHiFr3oeNaCtExbWRvAOsMWJeDh7E89ckoj/Yt6+nku1mGYgTwMqKWUEqX3jh0NQhosBjXLm1A6v3lhGvX9gGbMSeT+fX8TBut92MtlXeOh7N/w0UNxcjEUCgAm/u4AUTLLij87steUhXkP4I5AvF/eYcYs9SKVyAIgE48OQuAPviCKHteYQCpjeK+FPKSz4MhJ3ZUdnI+6/HmfevqBpwulG7Y9ETc9WDfdzabtk3MeT/puGYATuIsAIItMAg9szfi8yZyLWLtRln/P10L/LffBR0uhjU2Efuwaqykk9SVg+n3e5ZPwyfQuUlK7Gd88lnPOTc1bqYFnAB00Ko77e3KTpUQB75NoxOA7otQqeQwQ8IWfxjfjPLQa59LU+6xOr7rOQHo17pdbuY87Cek+iDlxu5sF/Lxtc7NnL0ArN6sJhzo6k59+Miac8OtQyvr9iEryAuADk5BxOzLxbtLC7p7lk7Hd+PmrsBmwD9HomZpYIiOF19rWqa5h3cFtldONndMX4JdKSB57028mbyWkuLLJv1urJWVm7LNgMDkcwHYO6H26nqjF5w4wA1rvltE89uEPZKQ1jgo0WaDbaCitJ1F7AQxvRGsrbImxCCv2+RyofTw0t5fpuPQVAkZlcG6twutLlcjLpNuH/YLVOGGGb9gxoeuV8MCa6fi8A1M7orimHshLSdtoUm4ltjr9DtNk0/AGV/MzmMpJmWzbcrVG4Av0F3PqwDsmvHt51UVqCoQyEAloUACg8P/AiRxbUA0O1NvAAAAAElFTkSuQmCC"/></a>
+
+
+				<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABE1JREFUaEPtWbFuE0EQ3d07JCTiEMQH4HxBnJIqpqbAaRESSQ3Yh2ioiCMKOrg4Ei2hQKLD+QKcjgaRfAFOAwUFThxouNth5ryX3F1u79b2OWDJK1ny+XZn5828md0Zczblg0+5/mwG4F97cOaBqfPAggNlX/orDESNMbnAOC8jCPqMMroMoMuY6DEu25aw9noux2fzYUwhVHzBA7nBgTnm4oefCZy5NhebCKRnstoIQMnxakzyV2NY2kSX6JweE7Ded+123sJcAEr5DwlBh8BYWwDrSkvu522S9V74ooJWr+CcKn5uxOYKWM0DkQmAaONL+SVi+SMQsnbiXuqMo7Ru7Xzdb6JhNiLve5YQi1l0ygQwV/ddnNBQAo9QWNmUm6MCvOJARQyMFgwEtHXSsrRxpwUwyDby66kgIW8VbfnSA7jOhFzDTHabMf/zZc/e/PGanyQ9obyQmp20AOYf+Q5ykwKXxkG/ZRFPCx3zDf8hANuOCH2J+zyh51Ldpyx0lb5j5nt8vG25aZtrAZTqEjMA3DFxow4V0YHe/XJ5aqCjki/w9dOz9fCp37JvDgCc7Y8QdvstOnfOjwwAXgcXrgRLDLIBTQvOCikbHKCKtKjGtgPoAOcdW4itMI7mG95dAP4unId8f4Z8f07PcRrBHgKLy1OLMgD4xP9y4AED/s85f6pcijfhGp1X8PcuylsP4wlB3EMQS5yzbx4X73+7/HsAIE7hLlJrcUgP+GiQwcgDkJL+MvQfvELLbR63rKZuojLIx/A9Akg1dpYHjAAkN1IbvkXQOzazA+57zKugd9bw6/2owlmGKRSAFGI5LRCHPeiUUnQ9CLIL0QlT5HLa2VIoAJ37ktTJoxppnFRMR6ULAVCqRzIVY28RKNEkd2D63DmjU3qGuSAA5oEeRWWinMkclQzSDYZWOg3iNAol7yzI5Wum9yQVOz/DndOuCjMAeR4g60XnmARwaHET65rMGYtCAwBTEsQ6605NGtUBUMFIp21YCvZw7qqublC0oPJ0QdHpEAO4MvGDbJgjP1CMsx2QYse22AE9ej5b4lS4AIudE8PIndhdiBT8Xy9z3ZAaJhlG0YNO2Hhn4fwxc4jy1vLK08R1+gg9ENIuJrHwgkZK6QDDgiYshk63gz3OeEcI4ZoceAUUNJMvKbMuTfGScoSKLOpCdNM+Fh/LWRsW+U5lN6oIA9qMVNQn2yrYhF3vb9vE8YmPZFLQ1SODhJcxEo0t6pJR8UHBPbGRvCRmdSRyAShXksJhBdVDxE2k09YkEKDBNkh+RHZuN3DU5m4Xm16D5i6IsZq7+L9AFTsSZTzkMHMl/mcwoG0uALKG6lAT/0NPTMIBUZlHGLhNXTcuOtEIAC1QTatmpNk7IRB81xLcMY01YwChtpSdpC9rwAFbfZzS3NKYSPC+BBhbvOML0da1IXV7DA1gTGULXz4DULhJhxQ488CQBit8+tR74C8xXtZPceh0AAAAAABJRU5ErkJggg=="/></a>
+
+
+
+		</div>
+	</div>
+	</div>
+ </footer>
+</body>
+
+</html>
