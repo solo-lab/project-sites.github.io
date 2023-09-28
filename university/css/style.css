@@ -329,6 +329,12 @@ a {
           align-items: center;
 }
 
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .section_3 .contact__people .item__contact {
+    width: 90%;
+  }
+}
+
 .section_3 .contact__people .item__contact img {
   width: 192px;
   border-radius: 100%;
